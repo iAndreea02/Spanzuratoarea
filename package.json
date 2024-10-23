@@ -1,0 +1,14 @@
+{
+  "name": "spanzuratoarea",
+  "version": "1.0.0",
+  "description": "",
+  "main": "SpanzCaps_EX2.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "radu andreea",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
