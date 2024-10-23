@@ -3,27 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Joc Spânzurătoarea</title>
 </head>
 <body>
     <div class="main">
-    <h1>Ghiceste cuvantul!</h1>
-    <p id="status"></p>
+        <h1>Ghiceste cuvântul!</h1>
+        <p id="status"></p>
 
-    
+        <p id="viata">Vieți rămase: 6</p>
 
-    <form id="myForm">
-        <label for="name">Introdu o literă:</label>
-        <input type="text" id="name" maxlength="1" required>
-        <button type="submit">Submit</button>
-    </form>
+        <div id="lives">
+            <!-- Inimioarele -->
+        </div>
 
-    <p id="viata">Vieti ramase: 6</p>
+        <div>
+            <p>Litere folosite: <span id="litere-folosite"></span></p>
+        </div>
 
-    <div id="lives">
-        <!-- Inimioarele -->
+        <div id="keyboard">
+            <!-- Butoanele virtuale vor fi generate aici -->
+        </div>
+        <div class="ps-bt">
+        <button class="reset" id="res">Resetează Jocul</button>
     </div>
-</div>
+    </div>
+    <div class="gif">
+
+    </div>
     <script src="Spanzuratoarea_.js"></script> 
 </body>
 </html>
