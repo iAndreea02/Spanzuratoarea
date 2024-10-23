@@ -35,7 +35,7 @@ function updateHearts() {
 
 function updateStatus() {
     document.getElementById('status').innerText = vector_raspuns.join(' ');
-    document.getElementById('viata').innerText = `Vieți rămase: ${viata}`;
+    document.getElementById('viata').innerText = `Vieti ramase: ${viata}`;
 }
 
 function showLoseGif() {
@@ -54,7 +54,7 @@ function showWinGif() {
     document.body.style.backgroundColor = 'green'; // Schimbă fundalul în verde
     const winGif = document.createElement('img');
     winGif.src = 'back.gif'; // Calea către GIF-ul de câștig
-    winGif.alt = 'Ai câștigat!';
+    winGif.alt = 'Ai castigat!';
     winGif.style.position = 'fixed'; 
     winGif.style.top = '0'; 
     winGif.style.left = '0'; 
@@ -79,14 +79,14 @@ function resetGame() {
 function createKeyboard() {
     const litere = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     const keyboard = document.getElementById('keyboard');
-    keyboard.innerHTML = ''; // Curăță tastatura
+    keyboard.innerHTML = ''; 
 
     for (let i = 0; i < litere.length; i++) {
         const button = document.createElement('button');
         button.textContent = litere[i];
         button.onclick = function() {
-            button.disabled = true; // Dezactivează butonul
-            button.style.backgroundColor = "#ccc"; // Schimbă culoarea butonului
+            button.disabled = true; 
+            button.style.backgroundColor = "#ccc"; 
 
             var litera_aleasa = button.textContent.toLowerCase();
             var gasit = false;
@@ -110,7 +110,7 @@ function createKeyboard() {
             updateStatus();
 
             if (litere_ramase === 0) {
-                alert('Felicitări! Ai ghicit cuvântul!');
+                alert('Felicitari! Ai ghicit cuvantul!');
                 showWinGif();
                 disableKeyboard(); // Dezactivează tastatura
             } else if (viata === 0) {
