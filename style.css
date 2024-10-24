@@ -145,3 +145,83 @@ body {
       background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
     }
   }
+
+ /* Centrare completă pe pagină */
+/* From Uiverse.io by EmmaxPlay */ 
+.card {
+  display: none;
+  width: 650px;
+  height: 500px;
+  margin: 0 auto;
+  background-color: #b0e2a1;
+  border-radius: 8px;
+  z-index: 1;
+  position: fixed; /* Poziționează relativ față de fereastra vizualizată */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centrează elementul pe mijlocul paginii */
+  box-shadow:  5px 10px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.1); /* Adaugă umbre pentru efect */
+}
+
+/* Tools și cercuri colorate */
+.tools {
+  display: flex;
+  align-items: center;
+  padding: 9px;
+}
+
+.circle {
+  padding: 0 4px;
+}
+
+.box {
+  display: inline-block;
+  align-items: center;
+  width: 10px;
+  height: 10px;
+  padding: 1px;
+  border-radius: 50%;
+}
+
+.red {
+  background-color: #ff605c;
+}
+
+.yellow {
+  background-color: #ffbd44;
+}
+
+.green {
+  background-color: #00ca4e;
+}
+
+/* Text și buton */
+.reset-win-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #2a8ce8;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.reset-win-btn:hover {
+  background-color: #5a1db8;
+}
+.card__content {
+  display: flex;
+  flex-direction: column; /* Asigură alinierea pe orizontală */
+  justify-content: center; /* Centrează pe orizontală */
+  align-items: center; /* Centrează pe verticală */
+}
+
+.card__content img {
+  width: 400px;
+  height: 250px;
+  margin-right: 20px; /* Opțional: Adaugă spațiu între imagine și alte elemente, dacă e necesar */
+}
+.card__content h2{
+  font-family: 'Comic Sans MS';
+  font-size: 35px;
+}

@@ -41,13 +41,12 @@ function updateStatus() {
 function showLoseGif() {
     document.body.style.backgroundColor = 'red'; // Schimbă fundalul în roșu
     const loseGif = document.createElement('img');
-    loseGif.src = 'cat_cry.gif'; // Calea către GIF-ul de pierdere
-    loseGif.alt = 'Ai pierdut!';
     loseGif.style.position = 'fixed'; // Poziționează GIF-ul
     loseGif.style.bottom = '10px'; 
     loseGif.style.right = '10px'; 
     loseGif.style.width = '200px'; 
     document.body.appendChild(loseGif);
+    showLosePanel() 
 }
 
 function showWinGif() {
@@ -63,17 +62,22 @@ function showWinGif() {
     winGif.style.zIndex = '1000'; 
     winGif.style.pointerEvents = 'none'; 
     document.body.appendChild(winGif);
+    showWinPanel();
 }
 
 function resetGame() {
     document.body.style.backgroundColor = ''; // Resetează fundalul
     vector_raspuns = [];
     document.getElementById('lives').innerHTML = ''; // Resetează inimile
+
+   
     const loseGif = document.querySelector('img[alt="Ai pierdut!"]');
-    if (loseGif) loseGif.remove(); // Elimină GIF-ul de pierdere
-    const winGif = document.querySelector('img[alt="Ai câștigat!"]');
-    if (winGif) winGif.remove(); // Elimină GIF-ul de câștig
-    fetchWord(); 
+    if (loseGif) loseGif.remove(); 
+
+    const winGif = document.querySelector('img[alt="Ai castigat!"]');
+    if (winGif) winGif.remove();
+
+    fetchWord(); // Obține un nou cuvânt și resetează jocul
 }
 
 function createKeyboard() {
@@ -100,17 +104,16 @@ function createKeyboard() {
             }
 
             if (gasit) {
-                alert('Ai nimerit!');
+                
             } else {
                 viata--;
-                alert(`Nu ai nimerit! Mai ai ${viata} vieți.`); 
                 updateHearts(); 
             }
 
             updateStatus();
 
             if (litere_ramase === 0) {
-                alert('Felicitari! Ai ghicit cuvantul!');
+               
                 showWinGif();
                 disableKeyboard(); // Dezactivează tastatura
             } else if (viata === 0) {

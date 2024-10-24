@@ -27,10 +27,28 @@
         <div class="ps-bt">
         <button class="reset" id="res">Resetează Jocul</button>
     </div>
+  
+    <div class="card" id="win-panel" style="display: none;"> <!-- Ascunde panoul inițial -->
+    <div class="tools">
+        <div class="circle">
+            <span class="red box"></span>
+        </div>
+        <div class="circle">
+            <span class="yellow box"></span>
+        </div>
+        <div class="circle">
+            <span class="green box"></span>
+        </div>
     </div>
-    <div class="gif">
+    <div class="card__content">
+        <h2 id="panel-message">Felicitari!</h2> <!-- Mesajul va fi schimbat -->
+        <img id="panel-gif" src="cat-happy.gif" alt="GIF de câștig" class="win-gif"> <!-- GIF-ul va fi schimbat -->
+        <button id="resetButton" class="reset-win-btn">Resetează Jocul</button>
+    </div>
+</div>
 
-    </div>
+    
+    <script src="Panel_span.js"></script>
     <script src="Spanzuratoarea_.js"></script> 
 </body>
 </html>
